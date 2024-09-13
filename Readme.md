@@ -21,7 +21,7 @@ Ensure you have the following installed on your machine:
 
 1. Clone this repository to your local machine:
     ```bash
-    git https://github.com/ChrisHashing/web3_hosting.git
+    git clone https://github.com/ChrisHashing/web3_hosting.git
     ```
 
 2. Navigate to the project directory:
