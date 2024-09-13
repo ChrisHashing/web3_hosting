@@ -21,12 +21,12 @@ Ensure you have the following installed on your machine:
 
 1. Clone this repository to your local machine:
     ```bash
-    git clone <repository_url>
+    git https://github.com/ChrisHashing/web3_hosting.git
     ```
 
 2. Navigate to the project directory:
     ```bash
-    cd <project_directory>
+    cd web3_hosting
     ```
 
 3. Install dependencies:
