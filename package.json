@@ -1,0 +1,14 @@
+{
+  "name": "web3_hosting",
+  "version": "1.0.0",
+  "description": "This project demonstrates how to deploy website code (HTML, CSS, and JavaScript) to a smart contract on the Polygon network using Web3.js. The project leverages Infura as the Web3 provider and secures sensitive information, such as the private key and Infura API, using an `.env` file.",
+  "main": "host.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "web3": "^4.12.1"
+  }
+}
