@@ -4,9 +4,18 @@ This project demonstrates how to deploy website code (HTML, CSS, and JavaScript)
 
 ## Project Structure
 
-- **WebsiteContract.sol**: Contains the solidity smart contract to which we save the website files.
-- **deployWebsite.js**: Script to deploy the HTML, CSS, and JavaScript code to the smart contract.
+- **WebsiteContractV3.sol**: Contains the updated Solidity smart contract to which we save the website files in chunks.
+- **hostV3.js**: Script to deploy the HTML, CSS, and JavaScript code to the smart contract in chunks.
 - **.env**: Stores environment variables like your private key and Infura API URL.
+
+## Smart Contract (WebsiteContractV3.sol)
+
+The `WebsiteContractV3.sol` contract allows for storing website resources in chunks, which is useful for larger files. Key features include:
+
+- Stores resources as chunks, allowing for larger file uploads.
+- Each chunk contains content and content type.
+- Functions to set, get, and remove resource chunks.
+- Keeps track of the total number of chunks for each resource.
 
 ## Prerequisites
 
@@ -42,25 +51,20 @@ Ensure you have the following installed on your machine:
 
 ## Usage
 
-1. **Deploy the smart contract (WebsiteContract.sol) using hardhat or through remix ide**
-
-We will be adding the website files on to this contract.
+1. **Deploy the smart contract (WebsiteContractV3.sol) using hardhat or through remix ide**
 
 2. **Deploy Website to Smart Contract:**
 
     To deploy the HTML, CSS, and JavaScript resources to your smart contract, run:
     ```bash
-    node host.js
+    node hostV3.js
     ```
-    After adding the html, css and js in the host.js file or replacing the template codes. Don't forget to replace the ca with the smart contract address of the one which we deployed at step 1.
-
-    This will add the website files to the smart contract.
-
+    This script will read the build files from your React application and upload them in chunks to the smart contract.
 
 ## Customization
-  
-- **HTML, CSS, and JS Content:**
-  - You can modify the HTML, CSS, and JS resources in the `host.js` file before deploying them to the contract.
+
+- **React Build Files:**
+  - Build your React application and ensure the build files are in the `calculator` directory (or update the paths in `hostV3.js` accordingly).
 
 ## Environment Variables
 
